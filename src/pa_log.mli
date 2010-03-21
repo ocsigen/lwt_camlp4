@@ -25,14 +25,14 @@
     It replaces expression of the form:
 
     {[
-      Log.info_f "x = %d" x
+      Lwt_log.info_f ~section "x = %d" x
     ]}
 
     by
 
     {[
-      if Lwt_log.level !Lwt_log.default <= Lwt_log.Info then
-        Log.info_f "x = %d" x
+      if Lwt_log.Section.level section <= Lwt_log.Info then
+        Lwt_log.info_f ~section "x = %d" x
       else
         return ()
     ]}
