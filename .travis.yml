@@ -1,0 +1,26 @@
+sudo: required
+language: generic
+
+before_script:
+  - set -e
+  - sudo add-apt-repository -y ppa:avsm/ocaml42+opam12
+  - sudo apt-get update
+  - sudo apt-get install ocaml-nox opam
+  - opam init -y
+  - eval `opam config env`
+  - ocaml -version
+  - opam pin add --yes --no-action lwt_camlp4 .
+  - opam install --yes --deps-only lwt_camlp4
+
+script:
+  - make
+  - make clean
+  - make install-for-packaging-test
+  - make packaging-test
+
+notifications:
+  email:
+    recipients:
+      - antonbachin@yahoo.com
+    on_success: always
+    on_failure: always

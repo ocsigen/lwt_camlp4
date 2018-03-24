@@ -1,0 +1,23 @@
+opam-version: "1.2"
+
+version: "dev"
+homepage: "https://github.com/aantron/lwt_camlp4"
+doc: "https://github.com/aantron/lwt_camlp4/blob/master/src/pa_lwt.mli"
+bug-reports: "https://github.com/aantron/lwt_camlp4/issues"
+license: "LGPL with OpenSSL linking exception"
+
+authors: [
+  "Jérémie Dimino"
+]
+maintainer: "Anton Bachin <antonbachin@yahoo.com>"
+dev-repo: "https://github.com/aantron/lwt_camlp4.git"
+
+depends: [
+  "camlp4"
+  "jbuilder" {build}
+  "lwt"
+]
+
+build: [
+  ["jbuilder" "build" "-p" name "-j" jobs]
+]

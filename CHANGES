@@ -1,0 +1,45 @@
+===== Lwt 3.2.0 (2017-12-19) =====
+
+====== Planned to break in Lwt 4.0.0 ======
+
+  * The deprecated Camlp4 syntax will be factored out into lwt_camlp4, which is
+    installable from opam now (#370).
+
+===== Lwt 2.4.7 (2015-01-06) =====
+
+  * camlp4 is now optional.
+
+===== Lwt 2.4.5 (2014-04-21) =====
+
+  * fix for camlp4 trunk
+
+===== Lwt 2.3.2 (2011-11-04) =====
+
+  * Add location informations in logs:
+    ** allow loggers to get the current location through local storage
+    ** pass current location to logging functions
+    ** pass the current location with the syntax extension
+  * Add assert_lwt keyword to the syntax extension
+
+===== Lwt 2.3.1 (2011-07-13) =====
+
+  * Add -lwt-sequence-strict option to the syntax extension
+
+===== Lwt 2.3.0 (2011-04-12) =====
+
+  * Add match_lwt and while_lwt to the syntax extension
+  * Fixes:
+    ** syntax extension: handle "lwt ... = ... in ..." at toplevel
+
+===== Lwt 2.1.0 (2010-04-19) =====
+
+  * Adding a camlp4 filter for remmoving logging statement or inlining
+    tests
+
+===== Lwt 2.0.0 (2009-10-15) =====
+
+  * Adding a syntax extension {{{pa_lwt}}}:
+    ** handles anonymous bind {{{a >> b}}}
+    ** adds syntactic sugar for catching errors (ticket #6)
+    ** adds syntactic sugar for parallel let-binding construction
+    ** adds syntactic sugar for for-like loops
