@@ -3,7 +3,7 @@
 This syntax extension has been replaced by [Lwt][lwt]'s PPX (`lwt_ppx`), and
 was then factored out of the Lwt repository.
 
-See [pa_lwt.mli][mli] for documentation.
+See [`pa_lwt.mli`][mli] for documentation.
 
 To install, do `opam install lwt_camlp4`.
 
